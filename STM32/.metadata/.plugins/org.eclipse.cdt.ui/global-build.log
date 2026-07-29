@@ -1,28 +1,42 @@
-15:49:10 **** Incremental Build of configuration Debug for project UART_Project ****
+11:38:56 **** Incremental Build of configuration Debug for project Interfacing_BH1750 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "UART_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Anusha_TinyML_FDP\TinyML_Workshop_Nitte-\STM32\UART_Project\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: UART_Project.elf
+arm-none-eabi-gcc -o "Interfacing_BH1750.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Anusha_TinyML_FDP\TinyML_Workshop_Nitte-\STM32\Interfacing_BH1750\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Interfacing_BH1750.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Interfacing_BH1750.elf
  
-arm-none-eabi-size  UART_Project.elf 
-arm-none-eabi-objdump -h -S UART_Project.elf  > "UART_Project.list"
+arm-none-eabi-size  Interfacing_BH1750.elf 
+arm-none-eabi-objdump -h -S Interfacing_BH1750.elf  > "Interfacing_BH1750.list"
    text	   data	    bss	    dec	    hex	filename
-  16768	    104	   2056	  18928	   49f0	UART_Project.elf
+  40484	    468	   2148	  43100	   a85c	Interfacing_BH1750.elf
 Finished building: default.size.stdout
  
-Finished building: UART_Project.list
+Finished building: Interfacing_BH1750.list
  
-15:49:43 **** Incremental Build of configuration Debug for project UART_Project ****
+11:39:12 **** Incremental Build of configuration Debug for project Interfacing_BH1750 ****
 make -j16 all 
-arm-none-eabi-size  UART_Project.elf 
+arm-none-eabi-size  Interfacing_BH1750.elf 
    text	   data	    bss	    dec	    hex	filename
-  16768	    104	   2056	  18928	   49f0	UART_Project.elf
+  40484	    468	   2148	  43100	   a85c	Interfacing_BH1750.elf
 Finished building: default.size.stdout
  
-15:50:26 **** Incremental Build of configuration Debug for project UART_Project ****
+11:40:56 **** Incremental Build of configuration Debug for project Interfacing_BH1750 ****
 make -j16 all 
-arm-none-eabi-size  UART_Project.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Interfacing_BH1750.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Anusha_TinyML_FDP\TinyML_Workshop_Nitte-\STM32\Interfacing_BH1750\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Interfacing_BH1750.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Interfacing_BH1750.elf
+ 
+arm-none-eabi-size  Interfacing_BH1750.elf 
+arm-none-eabi-objdump -h -S Interfacing_BH1750.elf  > "Interfacing_BH1750.list"
    text	   data	    bss	    dec	    hex	filename
-  16768	    104	   2056	  18928	   49f0	UART_Project.elf
+  40484	    468	   2148	  43100	   a85c	Interfacing_BH1750.elf
+Finished building: default.size.stdout
+ 
+Finished building: Interfacing_BH1750.list
+ 
+11:41:33 **** Incremental Build of configuration Debug for project Interfacing_BH1750 ****
+make -j16 all 
+arm-none-eabi-size  Interfacing_BH1750.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40484	    468	   2148	  43100	   a85c	Interfacing_BH1750.elf
 Finished building: default.size.stdout
  

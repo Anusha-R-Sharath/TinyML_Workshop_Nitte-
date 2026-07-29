@@ -1,0 +1,10 @@
+11:41:33 **** Incremental Build of configuration Debug for project Interfacing_BH1750 ****
+make -j16 all 
+arm-none-eabi-size  Interfacing_BH1750.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40484	    468	   2148	  43100	   a85c	Interfacing_BH1750.elf
+Finished building: default.size.stdout
+ 
+
+11:41:33 Build Finished. 0 errors, 0 warnings. (took 278ms)
+
