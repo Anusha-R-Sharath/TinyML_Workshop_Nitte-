@@ -1,32 +1,32 @@
 ST Edge AI Core v2.2.0-20266 2adc00962
-Created date          : 2026-07-30 15:56:46
-Parameters            : generate --target stm32l4 --name network -m D:/Anusha_TinyML_FDP/TinyML_Workshop_Nitte-/ONNX/random_forest_model.onnx --compression none --verbosity 1 --workspace C:/Users/ADMIN/AppData/Local/Temp/mxAI_workspace900526198635819915960827648448092705 --output C:/Users/ADMIN/.stm32cubemx/network_output
+Created date          : 2026-07-30 16:07:00
+Parameters            : generate --target stm32l4 --name network -m D:/Anusha_TinyML_FDP/TinyML_Workshop_Nitte-/ONNX/random_forest_model.onnx --compression none --verbosity 1 --workspace C:/Users/ADMIN/AppData/Local/Temp/mxAI_workspace90058684223695996505335619016127769 --output C:/Users/ADMIN/.stm32cubemx/network_output
 
 Exec/report summary (generate)
---------------------------------------------------------------------------------------------------------------
-model file         :   D:\Anusha_TinyML_FDP\TinyML_Workshop_Nitte-\ONNX\random_forest_model.onnx              
-type               :   onnx                                                                                   
-c_name             :   network                                                                                
-compression        :   none                                                                                   
-options            :   allocate-inputs, allocate-outputs                                                      
-optimization       :   balanced                                                                               
-target/series      :   stm32l4                                                                                
-workspace dir      :   C:\Users\ADMIN\AppData\Local\Temp\mxAI_workspace900526198635819915960827648448092705   
-output dir         :   C:\Users\ADMIN\.stm32cubemx\network_output                                             
-model_fmt          :   undefined                                                                              
-model_name         :   random_forest_model                                                                    
-model_hash         :   0xee61876666aff892376c0a5906476d28                                                     
-params #           :   490,367 items (1.18 MiB)                                                               
---------------------------------------------------------------------------------------------------------------
-input 1/1          :   'float_input', f32(1x1x6), 24 Bytes, activations                                       
-output 1/2         :   'label0', int32(1x1), 4 Bytes, activations                                             
-output 2/2         :   'output_probability', f32(1x1x5x2), 40 Bytes, activations                              
-outputs (total)    :   44 Bytes                                                                               
-macc               :   1,306                                                                                  
-weights (ro)       :   1,236,440 B (1.18 MiB) (1 segment) / -725,028(-37.0%) vs float model                   
-activations (rw)   :   64 B (64 B) (1 segment) *                                                              
-ram (total)        :   64 B (64 B) = 64 + 0 + 0                                                               
---------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+model file         :   D:\Anusha_TinyML_FDP\TinyML_Workshop_Nitte-\ONNX\random_forest_model.onnx             
+type               :   onnx                                                                                  
+c_name             :   network                                                                               
+compression        :   none                                                                                  
+options            :   allocate-inputs, allocate-outputs                                                     
+optimization       :   balanced                                                                              
+target/series      :   stm32l4                                                                               
+workspace dir      :   C:\Users\ADMIN\AppData\Local\Temp\mxAI_workspace90058684223695996505335619016127769   
+output dir         :   C:\Users\ADMIN\.stm32cubemx\network_output                                            
+model_fmt          :   undefined                                                                             
+model_name         :   random_forest_model                                                                   
+model_hash         :   0xee61876666aff892376c0a5906476d28                                                    
+params #           :   490,367 items (1.18 MiB)                                                              
+-------------------------------------------------------------------------------------------------------------
+input 1/1          :   'float_input', f32(1x1x6), 24 Bytes, activations                                      
+output 1/2         :   'label0', int32(1x1), 4 Bytes, activations                                            
+output 2/2         :   'output_probability', f32(1x1x5x2), 40 Bytes, activations                             
+outputs (total)    :   44 Bytes                                                                              
+macc               :   1,306                                                                                 
+weights (ro)       :   1,236,440 B (1.18 MiB) (1 segment) / -725,028(-37.0%) vs float model                  
+activations (rw)   :   64 B (64 B) (1 segment) *                                                             
+ram (total)        :   64 B (64 B) = 64 + 0 + 0                                                              
+-------------------------------------------------------------------------------------------------------------
 (*) 'input'/'output' buffers are allocated in the activations buffer
 
 Model name - random_forest_model
