@@ -24,6 +24,7 @@
 #include "imu.h"
 #include "string.h"
 #include "stdio.h"
+#include "NanoEdgeAI.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,6 +41,7 @@
 /* USER CODE BEGIN PM */
 #define DATA_INPUT_USER 256
 #define AXIS_NUMBER 6
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -49,6 +51,8 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 float Imu_buffer[AXIS_NUMBER * DATA_INPUT_USER]={0};
+float probabilities[NEAI_NUMBER_OF_CLASSES];
+const char *id2class[NEAI_NUMBER_OF_CLASSES]={"Idle","Pitch","Roll","Yaw","Shake"};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,6 +63,7 @@ static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void fill_imu_buffer();
 void Log();
+void Inference();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -84,7 +89,12 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  enum neai_state error_code = neai_classification_init();
+  	if (error_code != NEAI_OK) {
+  		/* Check the returned error code (cf NanoEdgeAI.h). */
+  		printf("Knowledge Initialization Error");
+  		printf("%d",error_code);
+  	}
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -110,7 +120,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  Log();
+	  Inference();
   }
   /* USER CODE END 3 */
 }
@@ -295,24 +305,34 @@ void fill_imu_buffer()
 	}
 }
 
-void Log(){
+void Inference()
+{
+	int id_class_t0, id_class_tn;
 	fill_imu_buffer();
-	for (int i=0;i<DATA_INPUT_USER;i++){
-		printf("%.2f",Imu_buffer[AXIS_NUMBER*i]);
-		printf(" ");
-		printf("%.2f",Imu_buffer[AXIS_NUMBER*i+1]);
-		printf(" ");
-		printf("%.2f",Imu_buffer[AXIS_NUMBER*i+2]);
-		printf(" ");
-		printf("%.2f",Imu_buffer[AXIS_NUMBER*i+3]);
-		printf(" ");
-		printf("%.2f",Imu_buffer[AXIS_NUMBER*i+4]);
-		printf(" ");
-		printf("%.2f",Imu_buffer[AXIS_NUMBER*i+5]);
+	neai_classification(Imu_buffer, probabilities, &id_class_t0);
+	for(int i=0; i<3; i++)
+	{
+		fill_imu_buffer();
+		neai_classification(Imu_buffer, probabilities, &id_class_tn);
+		if(id_class_t0 != id_class_tn)
+		{
+			break;
+		}
+		if(id_class_t0 == id_class_tn)
+		{
+			printf("Detected Class:");
+			printf(id2class[id_class_t0]);
+			printf("\r\n");
+		}
+		else
+		{
+			printf("?");
+			printf("\r\n");
+		}
 	}
-	printf("\r\n");
-	HAL_Delay(100);
 }
+
+
 int __io_putchar(int ch)
 {
 	HAL_UART_Transmit(&huart1,(uint8_t *)&ch,1,HAL_MAX_DELAY);
