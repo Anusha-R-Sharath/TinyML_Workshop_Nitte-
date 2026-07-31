@@ -1,6 +1,6 @@
 ST Edge AI Core v2.2.0-20266 2adc00962
-Created date          : 2026-07-31 11:30:04
-Parameters            : generate --target stm32l4 --name network -m D:/Anusha_TinyML_FDP/TinyML_Workshop_Nitte-/ONNX/mlp_model.onnx --compression none --verbosity 1 --workspace C:/Users/ADMIN/AppData/Local/Temp/mxAI_workspace907566944607960016869211392007100324 --output C:/Users/ADMIN/.stm32cubemx/network_output
+Created date          : 2026-07-31 11:58:23
+Parameters            : generate --target stm32l4 --name network -m D:/Anusha_TinyML_FDP/TinyML_Workshop_Nitte-/ONNX/mlp_model.onnx --compression none --verbosity 1 --workspace C:/Users/ADMIN/AppData/Local/Temp/mxAI_workspace907736818347540014596303803274904068 --output C:/Users/ADMIN/.stm32cubemx/network_output
 
 Exec/report summary (generate)
 --------------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@ compression        :   none
 options            :   allocate-inputs, allocate-outputs                                                      
 optimization       :   balanced                                                                               
 target/series      :   stm32l4                                                                                
-workspace dir      :   C:\Users\ADMIN\AppData\Local\Temp\mxAI_workspace907566944607960016869211392007100324   
+workspace dir      :   C:\Users\ADMIN\AppData\Local\Temp\mxAI_workspace907736818347540014596303803274904068   
 output dir         :   C:\Users\ADMIN\.stm32cubemx\network_output                                             
 model_fmt          :   float                                                                                  
 model_name         :   mlp_model                                                                              

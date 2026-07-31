@@ -30,6 +30,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
+ ../Core/Inc/imu.h ../Core/Inc/main.h ../Core/Inc/lsm6dsl_reg.h \
  ../X-CUBE-AI/App/network.h ../X-CUBE-AI/App/network_config.h \
  ../Middlewares/ST/AI/Inc/ai_platform.h ../X-CUBE-AI/App/network_data.h \
  ../X-CUBE-AI/App/network_data_params.h \
@@ -66,6 +67,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
+../Core/Inc/imu.h:
+../Core/Inc/main.h:
+../Core/Inc/lsm6dsl_reg.h:
 ../X-CUBE-AI/App/network.h:
 ../X-CUBE-AI/App/network_config.h:
 ../Middlewares/ST/AI/Inc/ai_platform.h:

@@ -333,44 +333,44 @@
   ],
   "environment": {
     "generated_model": {
-      "generated_time": "2026-07-31T11:30:02+0530",
+      "generated_time": "2026-07-31T11:58:21+0530",
       "model_files": [
         {
           "name": "network_data_params.h",
-          "signature": "0xe51f4c015f32de5220ee8eff06db9160"
+          "signature": "0x5f7b670d1f5bd08c01e40f4f17c259b4"
         },
         {
           "name": "network_data_params.c",
-          "signature": "0x0febec62e1b517575a543a3ddf26665a"
+          "signature": "0xfe40417323aceb21d2257392ce94decd"
         },
         {
           "name": "network_data.h",
-          "signature": "0xd6f720e6d3315ef0b32f85a1fa8b92f9"
+          "signature": "0xae3f456541f9b5526e0fc54e523cc500"
         },
         {
           "name": "network_data.c",
-          "signature": "0x462109fa2d9d31194cc416d4573ee796"
+          "signature": "0xb8c459281c417948597b7fba4bdeecb8"
         },
         {
           "name": "network_config.h",
-          "signature": "0xf55ced9ec3ca6698e0ec3f79496bd138"
+          "signature": "0x1b90c428f330b27f0a3e814a6a68c8db"
         },
         {
           "name": "network.h",
-          "signature": "0xfb7f3380cc5c9e1bfd159c6a984e46fb"
+          "signature": "0x8f9fd80ded7c632c889531c0a9e6ea83"
         },
         {
           "name": "network.c",
-          "signature": "0x61cda5f5a994dec4a26f4aad8df8ab05"
+          "signature": "0x152af9566ec4e423daa932d218ec5347"
         }
       ],
       "name": "network"
     },
-    "network_signature": "0x5975e93a7112386c",
+    "network_signature": "0xd395cf8ca79959aa",
     "test_name": "",
     "tools": [
       {
-        "arguments": "generate --target stm32l4 --name network -m D:/Anusha_TinyML_FDP/TinyML_Workshop_Nitte-/ONNX/mlp_model.onnx --compression none --verbosity 1 --workspace C:/Users/ADMIN/AppData/Local/Temp/mxAI_workspace907566944607960016869211392007100324 --output C:/Users/ADMIN/.stm32cubemx/network_output",
+        "arguments": "generate --target stm32l4 --name network -m D:/Anusha_TinyML_FDP/TinyML_Workshop_Nitte-/ONNX/mlp_model.onnx --compression none --verbosity 1 --workspace C:/Users/ADMIN/AppData/Local/Temp/mxAI_workspace907736818347540014596303803274904068 --output C:/Users/ADMIN/.stm32cubemx/network_output",
         "environment": [
           "STATS_TYPE=X-CUBE-AI"
         ],
